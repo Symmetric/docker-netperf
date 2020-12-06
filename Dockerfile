@@ -13,5 +13,8 @@ RUN apt-get update && \
 RUN curl -LO ftp://ftp.netperf.org/netperf/netperf-2.7.0.tar.gz && tar -xzf netperf-2.7.0.tar.gz 
 RUN cd netperf-2.7.0 && ./configure && make && make install
 
+EXPOSE 12865/udp
+EXPOSE 12865/tcp
+
 USER 1001
 CMD ["/usr/local/bin/netserver", "-D"]
