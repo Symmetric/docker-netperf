@@ -29,4 +29,10 @@ Throughput Throughput  Stddev       Local
                        Microseconds Util   
                                     %      
 11198.09   10^6bits/s  32.46        31.51  
+```
 
+Start a local netperf server with Podman:
+```
+podman run --rm=true --user=1001 -d --name=netperf paultiplady/netperf
+03d764388fa439fa601d2d862e9a4752d86c3c349730a58e72f8f65ec48df3af
+```
